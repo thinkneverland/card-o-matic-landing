@@ -1,35 +1,67 @@
 ---
+
 ---
 
-<section id="install" class="py-24 px-6" style="background-color: var(--color-parchment);">
+<section
+  id="install"
+  class="py-24 px-6"
+  style="background-color: var(--color-parchment);"
+>
   <div class="divider-vines h-5 mb-16 opacity-40"></div>
 
   <div class="max-w-4xl mx-auto">
     <!-- Section header -->
     <div class="text-center mb-14">
-      <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold mb-4" style="background-color: var(--color-parchment-dark); color: var(--color-robot); border: 1px solid rgba(100,116,139,0.2);">
+      <div
+        class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold mb-4"
+        style="background-color: var(--color-parchment-dark); color: var(--color-robot); border: 1px solid rgba(100,116,139,0.2);"
+      >
         🤖 Installation
       </div>
-      <h2 class="text-4xl sm:text-5xl font-bold mb-4" style="font-family: var(--font-display); color: var(--color-forest-dark);">
+      <h2
+        class="text-4xl sm:text-5xl font-bold mb-4"
+        style="font-family: var(--font-display); color: var(--color-forest-dark);"
+      >
         Up and running in minutes
       </h2>
-      <p class="text-lg max-w-xl mx-auto" style="color: var(--color-bark-light);">
-        Install from GitHub Packages or clone from source, then connect to Linear or Jira.
+      <p
+        class="text-lg max-w-xl mx-auto"
+        style="color: var(--color-bark-light);"
+      >
+        Install the package or build from source, then connect to Linear or
+        Jira.
       </p>
     </div>
 
     <!-- Tab navigation -->
-    <div id="install-tabs" class="flex flex-wrap gap-2 mb-8 p-1.5 rounded-xl" style="background-color: var(--color-parchment-dark);">
-      <button data-tab="linear" class="install-tab active flex-1 min-w-fit px-4 py-2.5 rounded-lg text-sm font-semibold transition-all duration-200" style="">
+    <div
+      id="install-tabs"
+      class="flex flex-wrap gap-2 mb-8 p-1.5 rounded-xl"
+      style="background-color: var(--color-parchment-dark);"
+    >
+      <button
+        data-tab="linear"
+        class="install-tab active flex-1 min-w-fit px-4 py-2.5 rounded-lg text-sm font-semibold transition-all duration-200"
+        style=""
+      >
         Linear Setup
       </button>
-      <button data-tab="jira" class="install-tab flex-1 min-w-fit px-4 py-2.5 rounded-lg text-sm font-semibold transition-all duration-200">
+      <button
+        data-tab="jira"
+        class="install-tab flex-1 min-w-fit px-4 py-2.5 rounded-lg text-sm font-semibold transition-all duration-200"
+      >
         Jira Setup
       </button>
-      <button data-tab="source" class="install-tab flex-1 min-w-fit px-4 py-2.5 rounded-lg text-sm font-semibold transition-all duration-200">
+      <button
+        data-tab="source"
+        class="install-tab flex-1 min-w-fit px-4 py-2.5 rounded-lg text-sm font-semibold transition-all duration-200"
+      >
         From Source
       </button>
-      <button data-tab="env" class="install-tab flex-1 min-w-fit px-4 py-2.5 rounded-lg text-sm font-semibold transition-all duration-200">
+      <button
+        data-tab="env"
+        class="install-tab flex-1 min-w-fit px-4 py-2.5 rounded-lg text-sm font-semibold transition-all duration-200"
+      >
         Env Variables
       </button>
     </div>
@@ -38,59 +70,46 @@
 
     <!-- LINEAR TAB -->
     <div id="tab-linear" class="tab-panel">
-      <!-- Step 1: npm install -->
+      <!-- Step 1: Add to Claude -->
       <div class="step-card mb-6">
         <div class="step-header">
           <span class="step-num">1</span>
-          <h3 class="step-title">Install from GitHub Packages</h3>
-        </div>
-        <p class="step-desc">Add to your project's <code class="inline-code">.npmrc</code> file:</p>
-        <div class="code-block">
-          <div class="code-topbar">
-            <span class="code-dot red"></span><span class="code-dot yellow"></span><span class="code-dot green"></span>
-            <span class="code-filename">.npmrc</span>
-            <button class="copy-btn" data-copy="@thinkneverland:registry=https://npm.pkg.github.com&#10;//npm.pkg.github.com/:_authToken=YOUR_GITHUB_TOKEN">Copy</button>
-          </div>
-          <pre class="code-pre"><span class="code-key">@thinkneverland</span><span class="text-code">:registry=https://npm.pkg.github.com</span>
-<span class="text-code">//npm.pkg.github.com/:_authToken=</span><span class="code-string">YOUR_GITHUB_TOKEN</span></pre>
-        </div>
-        <p class="step-desc mt-4">Then install:</p>
-        <div class="code-block">
-          <div class="code-topbar">
-            <span class="code-dot red"></span><span class="code-dot yellow"></span><span class="code-dot green"></span>
-            <span class="code-filename">terminal</span>
-            <button class="copy-btn" data-copy="npm install @thinkneverland/card-o-matic-mcp">Copy</button>
-          </div>
-          <pre class="code-pre"><span class="code-keyword">npm</span><span class="text-code"> install </span><span class="code-string">@thinkneverland/card-o-matic-mcp</span></pre>
-        </div>
-      </div>
-
-      <!-- Step 2: Add to Claude -->
-      <div class="step-card mb-6">
-        <div class="step-header">
-          <span class="step-num">2</span>
           <h3 class="step-title">Add to Claude (CLI)</h3>
         </div>
         <div class="code-block">
           <div class="code-topbar">
-            <span class="code-dot red"></span><span class="code-dot yellow"></span><span class="code-dot green"></span>
+            <span class="code-dot red"></span><span class="code-dot yellow"
+            ></span><span class="code-dot green"></span>
             <span class="code-filename">terminal</span>
-            <button class="copy-btn" data-copy="claude mcp add --transport stdio --scope user \
+            <button
+              class="copy-btn"
+              data-copy="claude mcp add --transport stdio --scope user \
   --env LINEAR_ACCESS_TOKEN=lin_api_XXXX \
-  card-o-matic -- node /absolute/path/to/card-o-matic-mcp/dist/index.js">Copy</button>
+  card-o-matic -- node /absolute/path/to/card-o-matic-mcp/dist/index.js"
+              >Copy</button
+            >
           </div>
-          <pre class="code-pre"><span class="code-keyword">claude</span><span class="text-code"> mcp add --transport stdio --scope user \
+          <pre
+            class="code-pre"><span class="code-keyword">claude</span><span class="text-code"> mcp add --transport stdio --scope user \
   --env </span><span class="code-key">LINEAR_ACCESS_TOKEN</span><span class="text-code">=</span><span class="code-string">lin_api_XXXX</span><span class="text-code"> \
   card-o-matic -- node /absolute/path/to/</span><span class="code-string">card-o-matic-mcp</span><span class="text-code">/dist/index.js</span></pre>
         </div>
-        <p class="step-desc mt-4">Or edit <code class="inline-code">~/.claude.json</code> directly:</p>
+        <p class="step-desc mt-4">
+          Or edit <code class="inline-code">~/.claude.json</code> directly:
+        </p>
         <div class="code-block">
           <div class="code-topbar">
-            <span class="code-dot red"></span><span class="code-dot yellow"></span><span class="code-dot green"></span>
+            <span class="code-dot red"></span><span class="code-dot yellow"
+            ></span><span class="code-dot green"></span>
             <span class="code-filename">~/.claude.json</span>
-            <button class="copy-btn" data-copy='{"mcpServers":{"card-o-matic":{"type":"stdio","command":"node","args":["/absolute/path/to/card-o-matic-mcp/dist/index.js"],"env":{"LINEAR_ACCESS_TOKEN":"lin_api_XXXX"}}}}'>Copy</button>
+            <button
+              class="copy-btn"
+              data-copy='{"mcpServers":{"card-o-matic":{"type":"stdio","command":"node","args":["/absolute/path/to/card-o-matic-mcp/dist/index.js"],"env":{"LINEAR_ACCESS_TOKEN":"lin_api_XXXX"}}}}'
+              >Copy</button
+            >
           </div>
-          <pre class="code-pre"><span class="text-code">&#123;</span>
+          <pre
+            class="code-pre"><span class="text-code">&#123;</span>
   <span class="code-key">"mcpServers"</span><span class="text-code">: &#123;</span>
     <span class="code-key">"card-o-matic"</span><span class="text-code">: &#123;</span>
       <span class="code-key">"type"</span><span class="text-code">: </span><span class="code-string">"stdio"</span><span class="text-code">,</span>
@@ -115,17 +134,23 @@
         </div>
         <div class="code-block">
           <div class="code-topbar">
-            <span class="code-dot red"></span><span class="code-dot yellow"></span><span class="code-dot green"></span>
+            <span class="code-dot red"></span><span class="code-dot yellow"
+            ></span><span class="code-dot green"></span>
             <span class="code-filename">terminal</span>
-            <button class="copy-btn" data-copy="claude mcp add --transport stdio --scope user \
+            <button
+              class="copy-btn"
+              data-copy="claude mcp add --transport stdio --scope user \
   --env CARD_O_MATIC_PROVIDER=jira \
   --env JIRA_BASE_URL=https://yourorg.atlassian.net \
   --env JIRA_EMAIL=you@yourorg.com \
   --env JIRA_API_TOKEN=XXXX \
   --env JIRA_PROJECT_KEY=TN \
-  card-o-matic -- node /absolute/path/to/card-o-matic-mcp/dist/index.js">Copy</button>
+  card-o-matic -- node /absolute/path/to/card-o-matic-mcp/dist/index.js"
+              >Copy</button
+            >
           </div>
-          <pre class="code-pre"><span class="code-keyword">claude</span><span class="text-code"> mcp add --transport stdio --scope user \
+          <pre
+            class="code-pre"><span class="code-keyword">claude</span><span class="text-code"> mcp add --transport stdio --scope user \
   --env </span><span class="code-key">CARD_O_MATIC_PROVIDER</span><span class="text-code">=</span><span class="code-string">jira</span><span class="text-code"> \
   --env </span><span class="code-key">JIRA_BASE_URL</span><span class="text-code">=</span><span class="code-string">https://yourorg.atlassian.net</span><span class="text-code"> \
   --env </span><span class="code-key">JIRA_EMAIL</span><span class="text-code">=</span><span class="code-string">you@yourorg.com</span><span class="text-code"> \
@@ -138,15 +163,23 @@
       <div class="step-card mb-6">
         <div class="step-header">
           <span class="step-num">2</span>
-          <h3 class="step-title">Or edit <code class="inline-code-white">~/.claude.json</code></h3>
+          <h3 class="step-title">
+            Or edit <code class="inline-code-white">~/.claude.json</code>
+          </h3>
         </div>
         <div class="code-block">
           <div class="code-topbar">
-            <span class="code-dot red"></span><span class="code-dot yellow"></span><span class="code-dot green"></span>
+            <span class="code-dot red"></span><span class="code-dot yellow"
+            ></span><span class="code-dot green"></span>
             <span class="code-filename">~/.claude.json</span>
-            <button class="copy-btn" data-copy='{"mcpServers":{"card-o-matic":{"type":"stdio","command":"node","args":["/absolute/path/to/card-o-matic-mcp/dist/index.js"],"env":{"CARD_O_MATIC_PROVIDER":"jira","JIRA_BASE_URL":"https://yourorg.atlassian.net","JIRA_EMAIL":"you@yourorg.com","JIRA_API_TOKEN":"XXXX","JIRA_PROJECT_KEY":"TN"}}}}'>Copy</button>
+            <button
+              class="copy-btn"
+              data-copy='{"mcpServers":{"card-o-matic":{"type":"stdio","command":"node","args":["/absolute/path/to/card-o-matic-mcp/dist/index.js"],"env":{"CARD_O_MATIC_PROVIDER":"jira","JIRA_BASE_URL":"https://yourorg.atlassian.net","JIRA_EMAIL":"you@yourorg.com","JIRA_API_TOKEN":"XXXX","JIRA_PROJECT_KEY":"TN"}}}}'
+              >Copy</button
+            >
           </div>
-          <pre class="code-pre"><span class="text-code">&#123;</span>
+          <pre
+            class="code-pre"><span class="text-code">&#123;</span>
   <span class="code-key">"mcpServers"</span><span class="text-code">: &#123;</span>
     <span class="code-key">"card-o-matic"</span><span class="text-code">: &#123;</span>
       <span class="code-key">"type"</span><span class="text-code">: </span><span class="code-string">"stdio"</span><span class="text-code">,</span>
@@ -175,15 +208,19 @@
         </div>
         <div class="code-block">
           <div class="code-topbar">
-            <span class="code-dot red"></span><span class="code-dot yellow"></span><span class="code-dot green"></span>
+            <span class="code-dot red"></span><span class="code-dot yellow"
+            ></span><span class="code-dot green"></span>
             <span class="code-filename">terminal</span>
-            <button class="copy-btn" data-copy="git clone https://github.com/thinkneverland/card-o-matic-mcp.git
-cd card-o-matic-mcp
+            <button
+              class="copy-btn"
+              data-copy="cd card-o-matic-mcp
 npm install
-npm run build">Copy</button>
+npm run build"
+              >Copy</button
+            >
           </div>
-          <pre class="code-pre"><span class="code-keyword">git</span><span class="text-code"> clone https://github.com/thinkneverland/card-o-matic-mcp.git
-</span><span class="code-keyword">cd</span><span class="text-code"> card-o-matic-mcp
+          <pre
+            class="code-pre"><span class="code-keyword">cd</span><span class="text-code"> card-o-matic-mcp
 </span><span class="code-keyword">npm</span><span class="text-code"> install
 </span><span class="code-keyword">npm</span><span class="text-code"> run build</span></pre>
         </div>
@@ -193,8 +230,15 @@ npm run build">Copy</button>
           <span class="step-num">2</span>
           <h3 class="step-title">Register with Claude</h3>
         </div>
-        <p class="step-desc">Use the absolute path to the built <code class="inline-code">dist/index.js</code>. See the Linear or Jira tabs for the full MCP config.</p>
-        <div class="mt-4 p-4 rounded-xl" style="background: rgba(45,106,79,0.08); border: 1.5px solid rgba(45,106,79,0.2);">
+        <p class="step-desc">
+          Use the absolute path to the built <code class="inline-code"
+            >dist/index.js</code
+          >. See the Linear or Jira tabs for the full MCP config.
+        </p>
+        <div
+          class="mt-4 p-4 rounded-xl"
+          style="background: rgba(45,106,79,0.08); border: 1.5px solid rgba(45,106,79,0.2);"
+        >
           <p class="text-sm" style="color: var(--color-forest-dark);">
             <span class="font-semibold">Node requirement:</span> Node.js ≥ 20 required.
           </p>
@@ -204,37 +248,110 @@ npm run build">Copy</button>
 
     <!-- ENV TAB -->
     <div id="tab-env" class="tab-panel hidden">
-      <div class="overflow-x-auto rounded-2xl" style="border: 1.5px solid var(--color-parchment-dark);">
+      <div
+        class="overflow-x-auto rounded-2xl"
+        style="border: 1.5px solid var(--color-parchment-dark);"
+      >
         <table class="w-full text-sm">
           <thead>
             <tr style="background-color: var(--color-parchment-dark);">
-              <th class="text-left px-5 py-3 font-semibold" style="color: var(--color-forest-dark);">Variable</th>
-              <th class="text-left px-5 py-3 font-semibold" style="color: var(--color-forest-dark);">Provider</th>
-              <th class="text-left px-5 py-3 font-semibold" style="color: var(--color-forest-dark);">Required</th>
-              <th class="text-left px-5 py-3 font-semibold" style="color: var(--color-forest-dark);">Description</th>
+              <th
+                class="text-left px-5 py-3 font-semibold"
+                style="color: var(--color-forest-dark);">Variable</th
+              >
+              <th
+                class="text-left px-5 py-3 font-semibold"
+                style="color: var(--color-forest-dark);">Provider</th
+              >
+              <th
+                class="text-left px-5 py-3 font-semibold"
+                style="color: var(--color-forest-dark);">Required</th
+              >
+              <th
+                class="text-left px-5 py-3 font-semibold"
+                style="color: var(--color-forest-dark);">Description</th
+              >
             </tr>
           </thead>
           <tbody>
-            {[
-              { var: "CARD_O_MATIC_PROVIDER", provider: "—", req: "No", desc: "linear (default) or jira" },
-              { var: "LINEAR_ACCESS_TOKEN", provider: "Linear", req: "Yes", desc: "Linear API key or OAuth token" },
-              { var: "JIRA_BASE_URL", provider: "Jira", req: "Yes", desc: "e.g. https://yourorg.atlassian.net" },
-              { var: "JIRA_EMAIL", provider: "Jira", req: "Yes", desc: "Atlassian account email" },
-              { var: "JIRA_API_TOKEN", provider: "Jira", req: "Yes", desc: "Atlassian API token" },
-              { var: "JIRA_PROJECT_KEY", provider: "Jira", req: "Yes", desc: "Default project key (e.g. TN)" },
-              { var: "CARD_O_MATIC_HIDE_FOOTER", provider: "—", req: "No", desc: "Set to true to suppress the footer on all cards" },
-            ].map((row, i) => (
-              <tr style={`background-color: ${i % 2 === 0 ? 'var(--color-cream)' : 'var(--color-parchment)'};`}>
-                <td class="px-5 py-3.5"><code class="text-xs font-mono font-semibold" style="color: var(--color-forest);">{row.var}</code></td>
-                <td class="px-5 py-3.5 text-xs" style="color: var(--color-bark-light);">{row.provider}</td>
-                <td class="px-5 py-3.5">
-                  <span class={`text-xs font-semibold px-2 py-0.5 rounded-full ${row.req === 'Yes' ? 'bg-orange-100 text-orange-700' : 'bg-gray-100 text-gray-500'}`}>
-                    {row.req}
-                  </span>
-                </td>
-                <td class="px-5 py-3.5 text-xs" style="color: var(--color-bark-light);">{row.desc}</td>
-              </tr>
-            ))}
+            {
+              [
+                {
+                  var: "CARD_O_MATIC_PROVIDER",
+                  provider: "—",
+                  req: "No",
+                  desc: "linear (default) or jira",
+                },
+                {
+                  var: "LINEAR_ACCESS_TOKEN",
+                  provider: "Linear",
+                  req: "Yes",
+                  desc: "Linear API key or OAuth token",
+                },
+                {
+                  var: "JIRA_BASE_URL",
+                  provider: "Jira",
+                  req: "Yes",
+                  desc: "e.g. https://yourorg.atlassian.net",
+                },
+                {
+                  var: "JIRA_EMAIL",
+                  provider: "Jira",
+                  req: "Yes",
+                  desc: "Atlassian account email",
+                },
+                {
+                  var: "JIRA_API_TOKEN",
+                  provider: "Jira",
+                  req: "Yes",
+                  desc: "Atlassian API token",
+                },
+                {
+                  var: "JIRA_PROJECT_KEY",
+                  provider: "Jira",
+                  req: "Yes",
+                  desc: "Default project key (e.g. TN)",
+                },
+                {
+                  var: "CARD_O_MATIC_HIDE_FOOTER",
+                  provider: "—",
+                  req: "No",
+                  desc: "Set to true to suppress the footer on all cards",
+                },
+              ].map((row, i) => (
+                <tr
+                  style={`background-color: ${i % 2 === 0 ? "var(--color-cream)" : "var(--color-parchment)"};`}
+                >
+                  <td class="px-5 py-3.5">
+                    <code
+                      class="text-xs font-mono font-semibold"
+                      style="color: var(--color-forest);"
+                    >
+                      {row.var}
+                    </code>
+                  </td>
+                  <td
+                    class="px-5 py-3.5 text-xs"
+                    style="color: var(--color-bark-light);"
+                  >
+                    {row.provider}
+                  </td>
+                  <td class="px-5 py-3.5">
+                    <span
+                      class={`text-xs font-semibold px-2 py-0.5 rounded-full ${row.req === "Yes" ? "bg-orange-100 text-orange-700" : "bg-gray-100 text-gray-500"}`}
+                    >
+                      {row.req}
+                    </span>
+                  </td>
+                  <td
+                    class="px-5 py-3.5 text-xs"
+                    style="color: var(--color-bark-light);"
+                  >
+                    {row.desc}
+                  </td>
+                </tr>
+              ))
+            }
           </tbody>
         </table>
       </div>
@@ -291,13 +408,13 @@ npm run build">Copy</button>
     font-size: 0.8em;
     padding: 0.1em 0.4em;
     border-radius: 0.25rem;
-    background-color: rgba(255,255,255,0.15);
+    background-color: rgba(255, 255, 255, 0.15);
     color: inherit;
   }
   .code-block {
     border-radius: 0.875rem;
     overflow: hidden;
-    border: 1px solid rgba(255,255,255,0.06);
+    border: 1px solid rgba(255, 255, 255, 0.06);
     margin-top: 0.75rem;
   }
   .code-topbar {
@@ -312,15 +429,21 @@ npm run build">Copy</button>
     height: 10px;
     border-radius: 50%;
   }
-  .code-dot.red { background-color: #ff5f56; }
-  .code-dot.yellow { background-color: #ffbd2e; }
-  .code-dot.green { background-color: #27c93f; }
+  .code-dot.red {
+    background-color: #ff5f56;
+  }
+  .code-dot.yellow {
+    background-color: #ffbd2e;
+  }
+  .code-dot.green {
+    background-color: #27c93f;
+  }
   .code-filename {
     flex: 1;
     text-align: center;
     font-size: 0.72rem;
     font-family: var(--font-mono);
-    color: rgba(255,255,255,0.35);
+    color: rgba(255, 255, 255, 0.35);
     margin-left: -1.5rem;
   }
   .copy-btn {
@@ -328,14 +451,17 @@ npm run build">Copy</button>
     font-family: var(--font-sans);
     padding: 0.2rem 0.6rem;
     border-radius: 0.3rem;
-    background-color: rgba(255,255,255,0.1);
-    color: rgba(255,255,255,0.5);
+    background-color: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.5);
     cursor: pointer;
     border: none;
     transition: all 0.15s;
     flex-shrink: 0;
   }
-  .copy-btn:hover { background-color: rgba(255,255,255,0.2); color: rgba(255,255,255,0.8); }
+  .copy-btn:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.8);
+  }
   .code-pre {
     background-color: var(--color-code-bg);
     padding: 1rem 1.25rem;
@@ -355,7 +481,7 @@ npm run build">Copy</button>
   .install-tab.active {
     background-color: var(--color-cream);
     color: var(--color-forest-dark);
-    box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
   }
   .install-tab:hover:not(.active) {
     color: var(--color-bark);
@@ -364,31 +490,31 @@ npm run build">Copy</button>
 
 <script>
   // Tab switching
-  const tabs = document.querySelectorAll('.install-tab');
-  const panels = document.querySelectorAll('.tab-panel');
+  const tabs = document.querySelectorAll(".install-tab");
+  const panels = document.querySelectorAll(".tab-panel");
 
-  tabs.forEach(tab => {
-    tab.addEventListener('click', () => {
+  tabs.forEach((tab) => {
+    tab.addEventListener("click", () => {
       const target = (tab as HTMLElement).dataset.tab;
-      tabs.forEach(t => t.classList.remove('active'));
-      tab.classList.add('active');
-      panels.forEach(p => {
+      tabs.forEach((t) => t.classList.remove("active"));
+      tab.classList.add("active");
+      panels.forEach((p) => {
         if (p.id === `tab-${target}`) {
-          p.classList.remove('hidden');
+          p.classList.remove("hidden");
         } else {
-          p.classList.add('hidden');
+          p.classList.add("hidden");
         }
       });
     });
   });
 
   // Copy buttons
-  document.querySelectorAll('.copy-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const text = (btn as HTMLElement).dataset.copy || '';
+  document.querySelectorAll(".copy-btn").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const text = (btn as HTMLElement).dataset.copy || "";
       navigator.clipboard.writeText(text).then(() => {
-        btn.textContent = 'Copied!';
-        setTimeout(() => btn.textContent = 'Copy', 1800);
+        btn.textContent = "Copied!";
+        setTimeout(() => (btn.textContent = "Copy"), 1800);
       });
     });
   });

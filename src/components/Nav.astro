@@ -1,47 +1,80 @@
 ---
+
 ---
 
-<header id="top" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300" id="navbar">
+<header
+  id="top"
+  class="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
+  id="navbar"
+>
   <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
     <!-- Logo -->
     <a href="#top" class="flex items-center gap-2.5 group">
-      <div class="w-8 h-8 rounded-lg flex items-center justify-center" style="background-color: var(--color-forest);">
-        <svg width="18" height="18" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect x="10" y="14" width="44" height="36" rx="5" fill="white" opacity="0.95"/>
-          <rect x="17" y="22" width="30" height="3" rx="1.5" fill="#2d6a4f"/>
-          <rect x="17" y="29" width="22" height="2" rx="1" fill="#94a3b8"/>
-          <rect x="17" y="35" width="16" height="2" rx="1" fill="#94a3b8"/>
-          <circle cx="52" cy="14" r="9" fill="#c9a227"/>
-          <path d="M52 8.5 L53.8 12.3 L58 12.3 L55 14.7 L56.1 18.5 L52 16.2 L47.9 18.5 L49 14.7 L46 12.3 L50.2 12.3 Z" fill="white"/>
+      <div
+        class="w-8 h-8 rounded-lg flex items-center justify-center"
+        style="background-color: var(--color-forest);"
+      >
+        <svg
+          width="18"
+          height="18"
+          viewBox="0 0 64 64"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect
+            x="10"
+            y="14"
+            width="44"
+            height="36"
+            rx="5"
+            fill="white"
+            opacity="0.95"></rect>
+          <rect x="17" y="22" width="30" height="3" rx="1.5" fill="#2d6a4f"
+          ></rect>
+          <rect x="17" y="29" width="22" height="2" rx="1" fill="#94a3b8"
+          ></rect>
+          <rect x="17" y="35" width="16" height="2" rx="1" fill="#94a3b8"
+          ></rect>
+          <circle cx="52" cy="14" r="9" fill="#c9a227"></circle>
+          <path
+            d="M52 8.5 L53.8 12.3 L58 12.3 L55 14.7 L56.1 18.5 L52 16.2 L47.9 18.5 L49 14.7 L46 12.3 L50.2 12.3 Z"
+            fill="white"></path>
         </svg>
       </div>
-      <span class="font-semibold text-lg tracking-tight" style="font-family: var(--font-display); color: var(--color-forest-dark);">
+      <span
+        class="font-semibold text-lg tracking-tight"
+        style="font-family: var(--font-display); color: var(--color-forest-dark);"
+      >
         Card-O-Matic
       </span>
     </a>
 
     <!-- Nav links -->
     <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
-      <a href="#features" class="nav-link" style="color: var(--color-bark-light);">Features</a>
-      <a href="#how-it-works" class="nav-link" style="color: var(--color-bark-light);">How It Works</a>
-      <a href="#atlas" class="nav-link" style="color: var(--color-bark-light);">Atlas MCP</a>
-      <a href="#install" class="nav-link" style="color: var(--color-bark-light);">Install</a>
-      <a href="#card-format" class="nav-link" style="color: var(--color-bark-light);">Card Format</a>
+      <a
+        href="#features"
+        class="nav-link"
+        style="color: var(--color-bark-light);">Features</a
+      >
+      <a
+        href="#how-it-works"
+        class="nav-link"
+        style="color: var(--color-bark-light);">How It Works</a
+      >
+      <a href="#atlas" class="nav-link" style="color: var(--color-bark-light);"
+        >Atlas MCP</a
+      >
+      <a
+        href="#install"
+        class="nav-link"
+        style="color: var(--color-bark-light);">Install</a
+      >
+      <a
+        href="#card-format"
+        class="nav-link"
+        style="color: var(--color-bark-light);">Card Format</a
+      >
     </nav>
-
-    <!-- CTA -->
-    <a
-      href="https://github.com/thinkneverland/card-o-matic-mcp"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="hidden md:flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-semibold text-white transition-all duration-200 hover:opacity-90 hover:shadow-md"
-      style="background-color: var(--color-forest);"
-    >
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-        <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
-      </svg>
-      GitHub
-    </a>
 
     <!-- Mobile menu button -->
     <button
@@ -50,23 +83,53 @@
       style="color: var(--color-bark);"
       aria-label="Toggle menu"
     >
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <line x1="3" y1="6" x2="21" y2="6"/>
-        <line x1="3" y1="12" x2="21" y2="12"/>
-        <line x1="3" y1="18" x2="21" y2="18"/>
+      <svg
+        width="20"
+        height="20"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+      >
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
       </svg>
     </button>
   </div>
 
   <!-- Mobile menu -->
-  <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 border-t" style="background-color: var(--color-cream); border-color: var(--color-parchment-dark);">
+  <div
+    id="mobile-menu"
+    class="hidden md:hidden px-6 pb-4 border-t"
+    style="background-color: var(--color-cream); border-color: var(--color-parchment-dark);"
+  >
     <nav class="flex flex-col gap-3 pt-4 text-sm font-medium">
-      <a href="#features" class="mobile-nav-link" style="color: var(--color-bark-light);">Features</a>
-      <a href="#how-it-works" class="mobile-nav-link" style="color: var(--color-bark-light);">How It Works</a>
-      <a href="#atlas" class="mobile-nav-link" style="color: var(--color-bark-light);">Atlas MCP</a>
-      <a href="#install" class="mobile-nav-link" style="color: var(--color-bark-light);">Install</a>
-      <a href="#card-format" class="mobile-nav-link" style="color: var(--color-bark-light);">Card Format</a>
-      <a href="https://github.com/thinkneverland/card-o-matic-mcp" target="_blank" rel="noopener noreferrer" class="font-semibold" style="color: var(--color-forest);">GitHub →</a>
+      <a
+        href="#features"
+        class="mobile-nav-link"
+        style="color: var(--color-bark-light);">Features</a
+      >
+      <a
+        href="#how-it-works"
+        class="mobile-nav-link"
+        style="color: var(--color-bark-light);">How It Works</a
+      >
+      <a
+        href="#atlas"
+        class="mobile-nav-link"
+        style="color: var(--color-bark-light);">Atlas MCP</a
+      >
+      <a
+        href="#install"
+        class="mobile-nav-link"
+        style="color: var(--color-bark-light);">Install</a
+      >
+      <a
+        href="#card-format"
+        class="mobile-nav-link"
+        style="color: var(--color-bark-light);">Card Format</a
+      >
     </nav>
   </div>
 </header>
@@ -90,13 +153,13 @@
 </style>
 
 <script>
-  const btn = document.getElementById('mobile-menu-btn');
-  const menu = document.getElementById('mobile-menu');
-  btn?.addEventListener('click', () => {
-    menu?.classList.toggle('hidden');
+  const btn = document.getElementById("mobile-menu-btn");
+  const menu = document.getElementById("mobile-menu");
+  btn?.addEventListener("click", () => {
+    menu?.classList.toggle("hidden");
   });
   // Close mobile menu on link click
-  menu?.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => menu.classList.add('hidden'));
+  menu?.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => menu.classList.add("hidden"));
   });
 </script>
