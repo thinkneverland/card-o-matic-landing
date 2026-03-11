@@ -1,0 +1,27 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Nav from "../components/Nav.astro";
+import Hero from "../components/Hero.astro";
+import Features from "../components/Features.astro";
+import HowItWorks from "../components/HowItWorks.astro";
+import AtlasMCP from "../components/AtlasMCP.astro";
+import Installation from "../components/Installation.astro";
+import CardFormat from "../components/CardFormat.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout
+	title="Card-O-Matic — Codebase-Aware Issue Cards for Linear & Jira"
+	description="An MCP server that gives AI the tools to create properly structured Linear or Jira issues with accurate Acceptance Criteria and Test Criteria grounded in your actual codebase."
+>
+	<Nav />
+	<main>
+		<Hero />
+		<Features />
+		<HowItWorks />
+		<AtlasMCP />
+		<Installation />
+		<CardFormat />
+	</main>
+	<Footer />
+</Layout>

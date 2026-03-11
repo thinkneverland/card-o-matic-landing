@@ -1,0 +1,183 @@
+---
+---
+
+<section id="card-format" class="py-24 px-6">
+  <div class="divider-vines h-5 mb-16 opacity-60"></div>
+
+  <div class="max-w-6xl mx-auto">
+    <!-- Section header -->
+    <div class="text-center mb-14">
+      <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold mb-4" style="background-color: var(--color-fairy-pale); color: var(--color-fairy); border: 1px solid rgba(124,58,237,0.2);">
+        📋 Card Format
+      </div>
+      <h2 class="text-4xl sm:text-5xl font-bold mb-4" style="font-family: var(--font-display); color: var(--color-forest-dark);">
+        Structured. Consistent. Beautiful.
+      </h2>
+      <p class="text-lg max-w-2xl mx-auto" style="color: var(--color-bark-light);">
+        Every card follows the same standard — but adapts intelligently to your task type, provider, and project conventions.
+      </p>
+    </div>
+
+    <div class="grid lg:grid-cols-2 gap-10 items-start">
+      <!-- Left: Card preview -->
+      <div class="animate-float" style="animation-duration: 5s;">
+        <!-- Card chrome -->
+        <div class="rounded-2xl overflow-hidden shadow-2xl" style="border: 1.5px solid var(--color-parchment-dark);">
+          <!-- Card header (issue title bar) -->
+          <div class="px-5 py-3.5 flex items-center gap-3" style="background: linear-gradient(90deg, var(--color-forest-dark) 0%, #1b4332 100%);">
+            <div class="flex gap-1.5">
+              <span class="w-2.5 h-2.5 rounded-full bg-red-400"></span>
+              <span class="w-2.5 h-2.5 rounded-full bg-yellow-400"></span>
+              <span class="w-2.5 h-2.5 rounded-full bg-green-400"></span>
+            </div>
+            <span class="text-xs font-mono font-semibold text-white opacity-80 flex-1 text-center -ml-8">LINEAR-42 · Feature</span>
+          </div>
+
+          <!-- Card body -->
+          <div class="p-6 text-sm leading-relaxed" style="background-color: var(--color-cream); font-family: var(--font-mono); font-size: 0.78rem;">
+            <div class="mb-4">
+              <span class="code-comment">[repo=myrepo]</span>
+            </div>
+
+            <div class="mb-4">
+              <div class="font-bold mb-1" style="color: var(--color-forest-dark);">## Description</div>
+              <div style="color: var(--color-bark-light);">Add rate limiting to the auth API to prevent brute-force attacks on the login endpoint.</div>
+            </div>
+
+            <div class="mb-4">
+              <div class="font-bold mb-1" style="color: var(--color-forest-dark);">## Relevant Files</div>
+              <div style="color: var(--color-fairy);">- `src/auth/login.ts`</div>
+              <div style="color: var(--color-fairy);">- `src/middleware/rateLimit.ts`</div>
+              <div style="color: var(--color-fairy);">- `tests/auth.test.ts`</div>
+            </div>
+
+            <div class="mb-4">
+              <div class="font-bold mb-1" style="color: var(--color-forest-dark);">## Acceptance Criteria</div>
+              <div class="flex items-start gap-1.5 mb-1">
+                <span style="color: var(--color-forest);">- [ ]</span>
+                <span style="color: var(--color-bark-light);">Rate limit login endpoint to 5 req/min per IP</span>
+              </div>
+              <div class="flex items-start gap-1.5 mb-1">
+                <span style="color: var(--color-forest);">- [ ]</span>
+                <span style="color: var(--color-bark-light);">Return 429 with Retry-After header on limit exceeded</span>
+              </div>
+              <div class="flex items-start gap-1.5 mb-1">
+                <span style="color: var(--color-forest);">- [ ]</span>
+                <span style="color: var(--color-bark-light);">Strict TypeScript — no <code>any</code> types</span>
+              </div>
+              <div class="flex items-start gap-1.5 mb-1 opacity-60">
+                <span style="color: var(--color-gold);">- [ ]</span>
+                <span style="color: var(--color-bark-light);">Review and reference all attached documents before implementation.</span>
+              </div>
+              <div class="flex items-start gap-1.5 opacity-60">
+                <span style="color: var(--color-gold);">- [ ]</span>
+                <span style="color: var(--color-bark-light);">No unrelated changes — only the scope defined in this card.</span>
+              </div>
+            </div>
+
+            <div class="mb-4">
+              <div class="font-bold mb-1" style="color: var(--color-forest-dark);">## Test Criteria</div>
+              <div class="flex items-start gap-1.5 mb-1">
+                <span style="color: var(--color-forest);">- [ ]</span>
+                <span style="color: var(--color-bark-light);">All existing tests pass</span>
+              </div>
+              <div class="flex items-start gap-1.5 mb-1">
+                <span style="color: var(--color-forest);">- [ ]</span>
+                <span style="color: var(--color-bark-light);">Unit tests for rate limiter logic</span>
+              </div>
+              <div class="flex items-start gap-1.5">
+                <span style="color: var(--color-forest);">- [ ]</span>
+                <span style="color: var(--color-bark-light);">Lint and typecheck pass</span>
+              </div>
+            </div>
+
+            <hr class="my-4 opacity-20" style="border-color: var(--color-bark);" />
+
+            <div class="mb-3">
+              <div class="font-bold mb-1" style="color: var(--color-forest-dark);">## AI Implementation Guidance</div>
+              <div class="mb-1" style="color: var(--color-bark-light);"><strong class="font-semibold" style="color: var(--color-bark);">Conventions:</strong> Use express-rate-limit; store in Redis</div>
+              <div style="color: var(--color-bark-light);"><strong class="font-semibold" style="color: var(--color-bark);">Affected Routes:</strong> POST /api/auth/login</div>
+            </div>
+
+            <hr class="my-4 opacity-20" style="border-color: var(--color-bark);" />
+
+            <div class="text-xs italic opacity-50" style="color: var(--color-robot);">
+              🤖 Generated by Card-O-Matic, refined by a human.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Explanations -->
+      <div class="flex flex-col gap-6">
+
+        <!-- Mode toggle explainer -->
+        <div class="rounded-2xl p-6" style="background-color: var(--color-parchment); border: 1.5px solid var(--color-parchment-dark);">
+          <h3 class="font-bold text-base mb-3" style="font-family: var(--font-display); color: var(--color-forest-dark);">Two Modes</h3>
+          <div class="grid grid-cols-2 gap-3">
+            <div class="p-3.5 rounded-xl" style="background-color: var(--color-cream); border: 1.5px solid var(--color-forest); border-left-width: 4px;">
+              <div class="text-xs font-bold mb-1" style="color: var(--color-forest);">human mode</div>
+              <div class="text-xs" style="color: var(--color-bark-light);">Rich markdown with prose headings and checkbox AC/TC. Optimised for readability in Linear or Jira.</div>
+            </div>
+            <div class="p-3.5 rounded-xl" style="background-color: var(--color-cream); border: 1.5px solid var(--color-robot); border-left-width: 4px;">
+              <div class="text-xs font-bold mb-1" style="color: var(--color-robot);">ai mode</div>
+              <div class="text-xs" style="color: var(--color-bark-light);">Compact numbered-list format. No prose headings. An AI coding agent can parse and act on it immediately.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mandatory ACs -->
+        <div class="rounded-2xl p-6" style="background-color: var(--color-parchment); border: 1.5px solid var(--color-parchment-dark);">
+          <h3 class="font-bold text-base mb-3" style="font-family: var(--font-display); color: var(--color-forest-dark);">
+            Mandatory ACs
+            <span class="ml-2 text-xs font-normal px-2 py-0.5 rounded-full" style="background-color: var(--color-gold-pale); color: var(--color-gold);">always included</span>
+          </h3>
+          <div class="flex flex-col gap-2">
+            <div class="flex items-start gap-2.5">
+              <span class="text-base mt-0.5" style="color: var(--color-gold);">✦</span>
+              <p class="text-sm" style="color: var(--color-bark-light);"><strong style="color: var(--color-bark);">Attached docs review</strong> — Review and reference all attached documents before implementation.</p>
+            </div>
+            <div class="flex items-start gap-2.5">
+              <span class="text-base mt-0.5" style="color: var(--color-gold);">✦</span>
+              <p class="text-sm" style="color: var(--color-bark-light);"><strong style="color: var(--color-bark);">Scope guard</strong> — No unrelated changes — only the scope defined in this card is modified.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Task types -->
+        <div class="rounded-2xl p-6" style="background-color: var(--color-parchment); border: 1.5px solid var(--color-parchment-dark);">
+          <h3 class="font-bold text-base mb-3" style="font-family: var(--font-display); color: var(--color-forest-dark);">Task Types & Auto TCs</h3>
+          <div class="flex flex-wrap gap-2">
+            {['feature', 'bug', 'refactor', 'chore'].map(t => (
+              <span class="px-3 py-1 rounded-full text-xs font-semibold font-mono" style="background-color: var(--color-parchment-dark); color: var(--color-forest-dark);">{t}</span>
+            ))}
+          </div>
+          <p class="text-xs mt-3" style="color: var(--color-bark-light);">Default Test Criteria are generated automatically based on <code class="text-xs font-mono px-1 py-0.5 rounded" style="background-color: var(--color-parchment-dark); color: var(--color-forest);">taskType</code> when none are provided.</p>
+        </div>
+
+        <!-- Footer / link preservation -->
+        <div class="rounded-2xl p-6" style="background-color: var(--color-parchment); border: 1.5px solid var(--color-parchment-dark);">
+          <h3 class="font-bold text-base mb-3" style="font-family: var(--font-display); color: var(--color-forest-dark);">Link Preservation on Update</h3>
+          <p class="text-sm" style="color: var(--color-bark-light);">When updating an existing issue, embedded URLs — Figma, Loom, Google Docs, GitHub — are automatically extracted from the original description and re-injected into a <strong style="color: var(--color-bark);">Referenced Links</strong> section, grouped by type.</p>
+        </div>
+
+        <!-- Templates -->
+        <div class="rounded-2xl p-6" style="background-color: var(--color-parchment); border: 1.5px solid var(--color-parchment-dark);">
+          <h3 class="font-bold text-base mb-2" style="font-family: var(--font-display); color: var(--color-forest-dark);">Per-Repo Templates</h3>
+          <p class="text-xs mb-3" style="color: var(--color-bark-light);">Place custom templates in your project to override the default card format:</p>
+          <div class="rounded-lg overflow-hidden">
+            <div class="px-4 py-2 text-xs font-mono" style="background-color: #0f172a; color: rgba(255,255,255,0.4);">project root</div>
+            <pre class="text-xs px-4 py-3 m-0 overflow-x-auto" style="background-color: var(--color-code-bg); color: #e2e8f0; font-family: var(--font-mono); line-height: 1.7;"><span style="color:#52b788;">.card-o-matic/</span>
+  <span style="color:#52b788;">templates/</span>
+    <span style="color:#82aaff;">feature.md</span>
+    <span style="color:#82aaff;">bug.md</span>
+    <span style="color:#82aaff;">refactor.md</span>
+    <span style="color:#82aaff;">chore.md</span>
+  <span style="color:#52b788;">cards/</span>
+    <span style="color:#94a3b8;">LINEAR-42.md</span></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

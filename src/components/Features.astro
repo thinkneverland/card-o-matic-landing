@@ -1,0 +1,173 @@
+---
+const features = [
+  {
+    icon: "code",
+    title: "Codebase-Aware Cards",
+    description: "Analyzes your actual project structure — frameworks, test setups, conventions — so every card is grounded in your real code.",
+    color: "forest",
+    badge: "Core",
+  },
+  {
+    icon: "layers",
+    title: "Linear & Jira Support",
+    description: "Native integration with both Linear and Jira. Includes Confluence search and full ADF formatting for Jira cards.",
+    color: "gold",
+    badge: "Dual Provider",
+  },
+  {
+    icon: "check-square",
+    title: "Structured AC & TC",
+    description: "Auto-generates Acceptance Criteria and Test Criteria by task type. Mandatory ACs always included — no missing scope guards.",
+    color: "fairy",
+    badge: "Quality",
+  },
+  {
+    icon: "cpu",
+    title: "Human & AI Modes",
+    description: "Human mode gives rich markdown with prose headings. AI mode outputs compact numbered lists an agent can parse and act on immediately.",
+    color: "robot",
+    badge: "Dual Mode",
+  },
+  {
+    icon: "link",
+    title: "Link Preservation",
+    description: "When updating existing issues, Figma, Loom, Google Docs, and GitHub URLs are extracted and re-injected into a Referenced Links section.",
+    color: "forest",
+    badge: "Smart Update",
+  },
+  {
+    icon: "file-text",
+    title: "Per-Repo Templates",
+    description: "Drop custom templates in `.card-o-matic/templates/` to override card format per task type: feature, bug, refactor, or chore.",
+    color: "gold",
+    badge: "Customizable",
+  },
+];
+
+const colorMap: Record<string, { bg: string; icon: string; badge: string }> = {
+  forest: { bg: "rgba(45,106,79,0.08)", icon: "#2d6a4f", badge: "rgba(45,106,79,0.15)" },
+  gold:   { bg: "rgba(201,162,39,0.08)", icon: "#c9a227", badge: "rgba(201,162,39,0.18)" },
+  fairy:  { bg: "rgba(124,58,237,0.07)", icon: "#7c3aed", badge: "rgba(124,58,237,0.12)" },
+  robot:  { bg: "rgba(100,116,139,0.08)", icon: "#64748b", badge: "rgba(100,116,139,0.15)" },
+};
+---
+
+<section id="features" class="py-24 px-6">
+  <!-- Vine divider top -->
+  <div class="divider-vines h-5 mb-16 opacity-60"></div>
+
+  <div class="max-w-6xl mx-auto">
+    <!-- Section header -->
+    <div class="text-center mb-14">
+      <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold mb-4" style="background-color: var(--color-parchment); color: var(--color-forest); border: 1px solid var(--color-parchment-dark);">
+        ⚙️ Features
+      </div>
+      <h2 class="text-4xl sm:text-5xl font-bold mb-4" style="font-family: var(--font-display); color: var(--color-forest-dark);">
+        Everything your AI needs<br/>to write perfect cards
+      </h2>
+      <p class="text-lg max-w-2xl mx-auto" style="color: var(--color-bark-light);">
+        Card-O-Matic hands your AI agent a full toolkit of MCP tools — from codebase analysis to one-step card creation.
+      </p>
+    </div>
+
+    <!-- Feature grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      {features.map((f) => {
+        const c = colorMap[f.color];
+        return (
+          <div
+            class="group relative rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+            style={`background-color: var(--color-parchment); border: 1.5px solid var(--color-parchment-dark);`}
+          >
+            <!-- Icon -->
+            <div class="w-11 h-11 rounded-xl flex items-center justify-center mb-4 transition-transform duration-300 group-hover:scale-110" style={`background: ${c.bg};`}>
+              {f.icon === "code" && (
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke={c.icon} stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
+                </svg>
+              )}
+              {f.icon === "layers" && (
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke={c.icon} stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/>
+                </svg>
+              )}
+              {f.icon === "check-square" && (
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke={c.icon} stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
+                </svg>
+              )}
+              {f.icon === "cpu" && (
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke={c.icon} stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/>
+                  <line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/>
+                  <line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/>
+                  <line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/>
+                  <line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/>
+                </svg>
+              )}
+              {f.icon === "link" && (
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke={c.icon} stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
+                  <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
+                </svg>
+              )}
+              {f.icon === "file-text" && (
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke={c.icon} stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                  <polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/>
+                </svg>
+              )}
+            </div>
+
+            <!-- Badge -->
+            <span class="inline-block text-xs font-semibold px-2 py-0.5 rounded-full mb-3" style={`background: ${c.badge}; color: ${c.icon};`}>
+              {f.badge}
+            </span>
+
+            <!-- Title -->
+            <h3 class="text-lg font-semibold mb-2" style="font-family: var(--font-display); color: var(--color-forest-dark);">
+              {f.title}
+            </h3>
+
+            <!-- Description -->
+            <p class="text-sm leading-relaxed" style="color: var(--color-bark-light);">
+              {f.description}
+            </p>
+          </div>
+        );
+      })}
+    </div>
+
+    <!-- Tools count callout -->
+    <div class="mt-12 rounded-2xl p-8 flex flex-col sm:flex-row items-center gap-6 text-center sm:text-left" style="background: linear-gradient(135deg, var(--color-forest-dark) 0%, #1b4332 100%);">
+      <!-- Gear icon -->
+      <div class="flex-shrink-0">
+        <svg width="48" height="48" viewBox="0 0 80 80" fill="none" class="animate-spin-slow opacity-80">
+          <circle cx="40" cy="40" r="16" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="3"/>
+          <circle cx="40" cy="40" r="7" fill="rgba(255,255,255,0.3)"/>
+          <rect x="37" y="16" width="6" height="9" rx="2" fill="rgba(255,255,255,0.5)"/>
+          <rect x="37" y="55" width="6" height="9" rx="2" fill="rgba(255,255,255,0.5)"/>
+          <rect x="16" y="37" width="9" height="6" rx="2" fill="rgba(255,255,255,0.5)"/>
+          <rect x="55" y="37" width="9" height="6" rx="2" fill="rgba(255,255,255,0.5)"/>
+          <rect x="22" y="22" width="6" height="8" rx="2" fill="rgba(255,255,255,0.4)" transform="rotate(45 25 26)"/>
+          <rect x="52" y="22" width="6" height="8" rx="2" fill="rgba(255,255,255,0.4)" transform="rotate(-45 55 26)"/>
+          <rect x="22" y="50" width="6" height="8" rx="2" fill="rgba(255,255,255,0.4)" transform="rotate(-45 25 54)"/>
+          <rect x="52" y="50" width="6" height="8" rx="2" fill="rgba(255,255,255,0.4)" transform="rotate(45 55 54)"/>
+        </svg>
+      </div>
+      <div class="flex-1">
+        <h3 class="text-xl font-bold text-white mb-1" style="font-family: var(--font-display);">18+ MCP Tools. One server.</h3>
+        <p class="text-sm" style="color: rgba(255,255,255,0.7);">
+          Provider-agnostic tools always registered. Linear or Jira tools activated by a single environment variable. Everything works together seamlessly.
+        </p>
+      </div>
+      <a
+        href="#install"
+        class="flex-shrink-0 px-5 py-2.5 rounded-xl font-semibold text-sm transition-all duration-200 hover:shadow-lg hover:-translate-y-0.5"
+        style="background-color: var(--color-gold); color: var(--color-forest-dark);"
+      >
+        Install Now →
+      </a>
+    </div>
+  </div>
+</section>
