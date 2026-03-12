@@ -1,0 +1,144 @@
+---
+
+---
+
+<section id="project-config" class="py-24 px-6" style="background-color: var(--color-parchment);">
+  <div class="divider-vines h-5 mb-16 opacity-40"></div>
+
+  <div class="max-w-5xl mx-auto">
+    <!-- Section header -->
+    <div class="text-center mb-14">
+      <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold mb-4" style="background-color: rgba(45,106,79,0.1); color: var(--color-forest); border: 1px solid rgba(45,106,79,0.2);">
+        &#9881; Project Config
+        <span class="px-1.5 py-0.5 rounded-full text-xs" style="background-color: rgba(124,58,237,0.15); color: var(--color-fairy);">v2.5</span>
+      </div>
+      <h2 class="text-4xl sm:text-5xl font-bold mb-4" style="font-family: var(--font-display); color: var(--color-forest-dark);">
+        Configure per project
+      </h2>
+      <p class="text-lg max-w-2xl mx-auto" style="color: var(--color-bark-light);">
+        Drop a <code class="text-base font-mono px-2 py-0.5 rounded" style="background-color: var(--color-parchment-dark); color: var(--color-forest);">config.json</code> in your <code class="text-base font-mono px-2 py-0.5 rounded" style="background-color: var(--color-parchment-dark); color: var(--color-forest);">.card-o-matic/</code> folder to override every default.
+      </p>
+    </div>
+
+    <div class="grid lg:grid-cols-2 gap-8">
+      <!-- Left: Example config -->
+      <div>
+        <div class="rounded-2xl overflow-hidden shadow-lg" style="border: 1.5px solid var(--color-parchment-dark);">
+          <div class="px-5 py-3 flex items-center gap-3" style="background-color: #0f172a;">
+            <div class="flex gap-1.5">
+              <span class="w-2.5 h-2.5 rounded-full bg-red-400"></span>
+              <span class="w-2.5 h-2.5 rounded-full bg-yellow-400"></span>
+              <span class="w-2.5 h-2.5 rounded-full bg-green-400"></span>
+            </div>
+            <span class="text-xs font-mono flex-1 text-center -ml-8" style="color: rgba(255,255,255,0.4);">.card-o-matic/config.json</span>
+          </div>
+          <pre class="text-xs px-5 py-4 m-0 overflow-x-auto" style="background-color: var(--color-code-bg); color: #e2e8f0; font-family: var(--font-mono); line-height: 1.7;">&#123;
+  <span class="code-key">"footer"</span>: <span class="code-string">"*Built by &#123;&#123;repo&#125;&#125; team*"</span>,
+  <span class="code-key">"mandatoryACs"</span>: [
+    <span class="code-string">"Review design specs before coding."</span>,
+    <span class="code-string">"Stay within card scope."</span>
+  ],
+  <span class="code-key">"defaultTC"</span>: &#123;
+    <span class="code-key">"feature"</span>: [
+      <span class="code-string">"All existing tests pass"</span>,
+      <span class="code-string">"Unit tests added"</span>,
+      <span class="code-string">"E2E smoke test passes"</span>
+    ]
+  &#125;,
+  <span class="code-key">"defaultDoD"</span>: [
+    <span class="code-string">"All AC met"</span>,
+    <span class="code-string">"Tests passing"</span>,
+    <span class="code-string">"PR approved"</span>
+  ],
+  <span class="code-key">"sectionOrder"</span>: [
+    <span class="code-string">"risk_assessment"</span>,
+    <span class="code-string">"acceptance_criteria"</span>,
+    <span class="code-string">"test_criteria"</span>
+  ],
+  <span class="code-key">"customSections"</span>: &#123;
+    <span class="code-key">"risk_assessment"</span>: &#123;
+      <span class="code-key">"label"</span>: <span class="code-string">"Risk Assessment"</span>,
+      <span class="code-key">"type"</span>: <span class="code-string">"text"</span>,
+      <span class="code-key">"position"</span>: <span class="code-string">"before_ac"</span>
+    &#125;,
+    <span class="code-key">"dependencies"</span>: &#123;
+      <span class="code-key">"label"</span>: <span class="code-string">"Dependencies"</span>,
+      <span class="code-key">"type"</span>: <span class="code-string">"list"</span>,
+      <span class="code-key">"position"</span>: <span class="code-string">"after_dod"</span>
+    &#125;
+  &#125;,
+  <span class="code-key">"issueFields"</span>: [
+    &#123;
+      <span class="code-key">"paramName"</span>: <span class="code-string">"estimate"</span>,
+      <span class="code-key">"type"</span>: <span class="code-string">"number"</span>,
+      <span class="code-key">"linearField"</span>: <span class="code-string">"estimate"</span>,
+      <span class="code-key">"jiraField"</span>: <span class="code-string">"customfield_10042"</span>
+    &#125;
+  ]
+&#125;</pre>
+        </div>
+      </div>
+
+      <!-- Right: Explanation cards -->
+      <div class="flex flex-col gap-5">
+        <!-- Override Defaults -->
+        <div class="rounded-2xl p-5" style="background-color: var(--color-cream); border: 1.5px solid var(--color-parchment-dark);">
+          <h3 class="font-bold text-sm mb-2" style="font-family: var(--font-display); color: var(--color-forest-dark);">Override Defaults</h3>
+          <p class="text-xs leading-relaxed" style="color: var(--color-bark-light);">Replace the built-in mandatory ACs, default Test Criteria (per task type), Definition of Done items, and footer text. Set <code class="text-xs font-mono px-1 py-0.5 rounded" style="background-color: var(--color-parchment-dark); color: var(--color-forest);">"footer": false</code> to disable the footer entirely. Use an empty <code class="text-xs font-mono px-1 py-0.5 rounded" style="background-color: var(--color-parchment-dark); color: var(--color-forest);">"mandatoryACs": []</code> to remove mandatory ACs.</p>
+        </div>
+
+        <!-- Custom Sections -->
+        <div class="rounded-2xl p-5" style="background-color: var(--color-cream); border: 1.5px solid var(--color-parchment-dark);">
+          <h3 class="font-bold text-sm mb-2" style="font-family: var(--font-display); color: var(--color-forest-dark);">Custom Card Sections</h3>
+          <p class="text-xs leading-relaxed mb-3" style="color: var(--color-bark-light);">Define named sections that render in your card body. Each section has a type and a position:</p>
+          <div class="grid grid-cols-2 gap-2">
+            <div class="flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full" style="background-color: var(--color-forest);"></span>
+              <span class="text-xs" style="color: var(--color-bark-light);"><strong>text</strong> — free-form</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full" style="background-color: var(--color-gold);"></span>
+              <span class="text-xs" style="color: var(--color-bark-light);"><strong>list</strong> — bullet items</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full" style="background-color: var(--color-fairy);"></span>
+              <span class="text-xs" style="color: var(--color-bark-light);"><strong>checklist</strong> — checkboxes</span>
+            </div>
+          </div>
+          <p class="text-xs mt-3" style="color: var(--color-bark-light);">Positions: <code class="text-xs font-mono px-1 py-0.5 rounded" style="background-color: var(--color-parchment-dark); color: var(--color-forest);">before_ac</code> <code class="text-xs font-mono px-1 py-0.5 rounded" style="background-color: var(--color-parchment-dark); color: var(--color-forest);">after_ac</code> <code class="text-xs font-mono px-1 py-0.5 rounded" style="background-color: var(--color-parchment-dark); color: var(--color-forest);">after_tc</code> <code class="text-xs font-mono px-1 py-0.5 rounded" style="background-color: var(--color-parchment-dark); color: var(--color-forest);">after_dod</code></p>
+        </div>
+
+        <!-- Section Ordering -->
+        <div class="rounded-2xl p-5" style="background-color: var(--color-cream); border: 1.5px solid var(--color-parchment-dark);">
+          <h3 class="font-bold text-sm mb-2" style="font-family: var(--font-display); color: var(--color-forest-dark);">Section Reordering</h3>
+          <p class="text-xs leading-relaxed" style="color: var(--color-bark-light);">The <code class="text-xs font-mono px-1 py-0.5 rounded" style="background-color: var(--color-parchment-dark); color: var(--color-forest);">sectionOrder</code> array controls the order of named sections in the card body. Sections not listed are appended at the end. Works with both template files and code-generated cards.</p>
+        </div>
+
+        <!-- Issue-Level Fields -->
+        <div class="rounded-2xl p-5" style="background-color: var(--color-cream); border: 1.5px solid var(--color-parchment-dark);">
+          <h3 class="font-bold text-sm mb-2" style="font-family: var(--font-display); color: var(--color-forest-dark);">Issue-Level Custom Fields</h3>
+          <p class="text-xs leading-relaxed" style="color: var(--color-bark-light);">The <code class="text-xs font-mono px-1 py-0.5 rounded" style="background-color: var(--color-parchment-dark); color: var(--color-forest);">issueFields</code> array maps parameter names to Linear GQL or Jira REST API fields. Pass values via <code class="text-xs font-mono px-1 py-0.5 rounded" style="background-color: var(--color-parchment-dark); color: var(--color-forest);">issueCustomFields</code> when creating or updating issues — they get injected into the API call automatically.</p>
+        </div>
+
+        <!-- Template Engine -->
+        <div class="rounded-2xl p-5" style="background-color: var(--color-cream); border: 1.5px solid rgba(124,58,237,0.2);">
+          <h3 class="font-bold text-sm mb-2" style="font-family: var(--font-display); color: var(--color-forest-dark);">
+            Template Engine Syntax
+            <span class="ml-2 text-xs font-normal px-2 py-0.5 rounded-full" style="background-color: rgba(124,58,237,0.12); color: var(--color-fairy);">v2.5</span>
+          </h3>
+          <p class="text-xs leading-relaxed mb-2" style="color: var(--color-bark-light);">Templates in <code class="text-xs font-mono px-1 py-0.5 rounded" style="background-color: var(--color-parchment-dark); color: var(--color-forest);">.card-o-matic/templates/</code> now support full directives. Custom field values from <code class="text-xs font-mono px-1 py-0.5 rounded" style="background-color: var(--color-parchment-dark); color: var(--color-forest);">customFields</code> are available as template variables.</p>
+          <div class="rounded-lg overflow-hidden">
+            <pre class="text-xs px-4 py-3 m-0 overflow-x-auto" style="background-color: var(--color-code-bg); color: #e2e8f0; font-family: var(--font-mono); line-height: 1.8;"><span style="color:#c792ea;">&#123;&#123;#if risk_assessment&#125;&#125;</span>
+<span style="color:#82aaff;">## Risk Assessment</span>
+<span style="color:#e2e8f0;">&#123;&#123;risk_assessment&#125;&#125;</span>
+<span style="color:#c792ea;">&#123;&#123;/if&#125;&#125;</span>
+
+<span style="color:#c792ea;">&#123;&#123;#each dependencies as dep&#125;&#125;</span>
+<span style="color:#e2e8f0;">- &#123;&#123;dep&#125;&#125;</span>
+<span style="color:#c792ea;">&#123;&#123;/each&#125;&#125;</span></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

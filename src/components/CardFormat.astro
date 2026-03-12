@@ -168,6 +168,7 @@
           <div class="rounded-lg overflow-hidden">
             <div class="px-4 py-2 text-xs font-mono" style="background-color: #0f172a; color: rgba(255,255,255,0.4);">project root</div>
             <pre class="text-xs px-4 py-3 m-0 overflow-x-auto" style="background-color: var(--color-code-bg); color: #e2e8f0; font-family: var(--font-mono); line-height: 1.7;"><span style="color:#52b788;">.card-o-matic/</span>
+  <span style="color:#82aaff;">config.json</span>
   <span style="color:#52b788;">templates/</span>
     <span style="color:#82aaff;">feature.md</span>
     <span style="color:#82aaff;">bug.md</span>
@@ -175,6 +176,66 @@
     <span style="color:#82aaff;">chore.md</span>
   <span style="color:#52b788;">cards/</span>
     <span style="color:#94a3b8;">LINEAR-42.md</span></pre>
+          </div>
+        </div>
+
+        <!-- Template Engine (v2.5) -->
+        <div id="template-engine" class="rounded-2xl p-6" style="background-color: var(--color-parchment); border: 1.5px solid rgba(124,58,237,0.25);">
+          <h3 class="font-bold text-base mb-2" style="font-family: var(--font-display); color: var(--color-forest-dark);">
+            Template Engine
+            <span class="ml-2 text-xs font-normal px-2 py-0.5 rounded-full" style="background-color: rgba(124,58,237,0.12); color: var(--color-fairy);">v2.5</span>
+          </h3>
+          <p class="text-xs mb-3" style="color: var(--color-bark-light);">Templates support conditionals, loops, and section reordering with a lightweight built-in engine:</p>
+          <div class="flex flex-col gap-2">
+            <div class="flex items-start gap-2">
+              <code class="text-xs font-mono px-1.5 py-0.5 rounded flex-shrink-0" style="background-color: var(--color-parchment-dark); color: var(--color-fairy);">&#123;&#123;variable&#125;&#125;</code>
+              <span class="text-xs" style="color: var(--color-bark-light);">Simple substitution</span>
+            </div>
+            <div class="flex items-start gap-2">
+              <code class="text-xs font-mono px-1.5 py-0.5 rounded flex-shrink-0" style="background-color: var(--color-parchment-dark); color: var(--color-fairy);">&#123;&#123;#if var&#125;&#125;...&#123;&#123;/if&#125;&#125;</code>
+              <span class="text-xs" style="color: var(--color-bark-light);">Conditionals with optional else</span>
+            </div>
+            <div class="flex items-start gap-2">
+              <code class="text-xs font-mono px-1.5 py-0.5 rounded flex-shrink-0" style="background-color: var(--color-parchment-dark); color: var(--color-fairy);">&#123;&#123;#each items as item&#125;&#125;</code>
+              <span class="text-xs" style="color: var(--color-bark-light);">Array loops with &#123;&#123;@index&#125;&#125;</span>
+            </div>
+            <div class="flex items-start gap-2">
+              <code class="text-xs font-mono px-1.5 py-0.5 rounded flex-shrink-0" style="background-color: var(--color-parchment-dark); color: var(--color-fairy);">&#123;&#123;#section name&#125;&#125;</code>
+              <span class="text-xs" style="color: var(--color-bark-light);">Named blocks reordered by config</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Config (v2.5) -->
+        <div class="rounded-2xl p-6" style="background-color: var(--color-parchment); border: 1.5px solid rgba(45,106,79,0.25);">
+          <h3 class="font-bold text-base mb-2" style="font-family: var(--font-display); color: var(--color-forest-dark);">
+            Project Config
+            <span class="ml-2 text-xs font-normal px-2 py-0.5 rounded-full" style="background-color: rgba(45,106,79,0.12); color: var(--color-forest);">v2.5</span>
+          </h3>
+          <p class="text-xs mb-3" style="color: var(--color-bark-light);">Drop a <code class="text-xs font-mono px-1 py-0.5 rounded" style="background-color: var(--color-parchment-dark); color: var(--color-forest);">config.json</code> in <code class="text-xs font-mono px-1 py-0.5 rounded" style="background-color: var(--color-parchment-dark); color: var(--color-forest);">.card-o-matic/</code> to override defaults per project:</p>
+          <div class="flex flex-wrap gap-1.5">
+            {['mandatoryACs', 'defaultTC', 'defaultDoD', 'footer', 'sectionOrder', 'customSections', 'issueFields'].map(k => (
+              <span class="px-2 py-0.5 rounded-full text-xs font-mono" style="background-color: var(--color-parchment-dark); color: var(--color-forest-dark);">{k}</span>
+            ))}
+          </div>
+        </div>
+
+        <!-- Custom Fields (v2.5) -->
+        <div class="rounded-2xl p-6" style="background-color: var(--color-parchment); border: 1.5px solid rgba(201,162,39,0.25);">
+          <h3 class="font-bold text-base mb-2" style="font-family: var(--font-display); color: var(--color-forest-dark);">
+            Custom Fields
+            <span class="ml-2 text-xs font-normal px-2 py-0.5 rounded-full" style="background-color: var(--color-gold-pale); color: var(--color-gold);">v2.5</span>
+          </h3>
+          <p class="text-xs mb-3" style="color: var(--color-bark-light);">Two types of custom fields, both driven by config:</p>
+          <div class="flex flex-col gap-2">
+            <div class="flex items-start gap-2.5">
+              <span class="text-base mt-0.5" style="color: var(--color-gold);">&#9670;</span>
+              <p class="text-xs" style="color: var(--color-bark-light);"><strong style="color: var(--color-bark);">Card body sections</strong> — Add text, list, or checklist sections at configurable positions (before AC, after AC, after TC, after DoD).</p>
+            </div>
+            <div class="flex items-start gap-2.5">
+              <span class="text-base mt-0.5" style="color: var(--color-gold);">&#9670;</span>
+              <p class="text-xs" style="color: var(--color-bark-light);"><strong style="color: var(--color-bark);">Issue-level fields</strong> — Map <code class="text-xs font-mono px-1 py-0.5 rounded" style="background-color: var(--color-parchment-dark); color: var(--color-forest);">issueCustomFields</code> to Linear GQL or Jira REST API fields (e.g. estimate, sprint).</p>
+            </div>
           </div>
         </div>
       </div>
