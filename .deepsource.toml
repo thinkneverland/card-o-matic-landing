@@ -1,0 +1,32 @@
+version = 1
+
+test_patterns = [
+  "**/*.test.*",
+  "**/*.spec.*",
+  "**/__tests__/**"
+]
+
+exclude_patterns = [
+  "node_modules/**",
+  "dist/**",
+  ".astro/**",
+  "coverage/**",
+  "*.min.js",
+  "*.generated.*",
+  "package-lock.json"
+]
+
+[[analyzers]]
+name = "javascript"
+enabled = true
+
+  [analyzers.meta]
+  environment = [
+    "nodejs",
+    "browser"
+  ]
+  dialect = "typescript"
+
+[[analyzers]]
+name = "secrets"
+enabled = true
