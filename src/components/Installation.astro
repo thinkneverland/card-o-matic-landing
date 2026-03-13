@@ -70,10 +70,35 @@
 
     <!-- LINEAR TAB -->
     <div id="tab-linear" class="tab-panel">
-      <!-- Step 1: Add to Claude -->
+      <!-- Step 1: Install -->
       <div class="step-card mb-6">
         <div class="step-header">
           <span class="step-num">1</span>
+          <h3 class="step-title">Install from npm</h3>
+        </div>
+        <div class="code-block">
+          <div class="code-topbar">
+            <span class="code-dot red"></span><span class="code-dot yellow"
+            ></span><span class="code-dot green"></span>
+            <span class="code-filename">terminal</span>
+            <button
+              class="copy-btn"
+              data-copy="npm install -g @thinkneverland/card-o-matic-mcp"
+              >Copy</button
+            >
+          </div>
+          <pre
+            class="code-pre"><span class="code-keyword">npm</span><span class="text-code"> install -g @thinkneverland/card-o-matic-mcp</span></pre>
+        </div>
+        <p class="step-desc mt-3">
+          Or skip the install — use <code class="inline-code">npx</code> directly
+          in your MCP config and it runs without a global install.
+        </p>
+      </div>
+      <!-- Step 2: Add to Claude -->
+      <div class="step-card mb-6">
+        <div class="step-header">
+          <span class="step-num">2</span>
           <h3 class="step-title">Add to Claude (CLI)</h3>
         </div>
         <div class="code-block">
@@ -85,14 +110,14 @@
               class="copy-btn"
               data-copy="claude mcp add --transport stdio --scope user \
   --env LINEAR_ACCESS_TOKEN=lin_api_XXXX \
-  card-o-matic -- node /absolute/path/to/card-o-matic-mcp/dist/index.js"
+  card-o-matic -- npx @thinkneverland/card-o-matic-mcp"
               >Copy</button
             >
           </div>
           <pre
             class="code-pre"><span class="code-keyword">claude</span><span class="text-code"> mcp add --transport stdio --scope user \
   --env </span><span class="code-key">LINEAR_ACCESS_TOKEN</span><span class="text-code">=</span><span class="code-string">lin_api_XXXX</span><span class="text-code"> \
-  card-o-matic -- node /absolute/path/to/</span><span class="code-string">card-o-matic-mcp</span><span class="text-code">/dist/index.js</span></pre>
+  card-o-matic -- </span><span class="code-keyword">npx</span><span class="text-code"> @thinkneverland/card-o-matic-mcp</span></pre>
         </div>
         <p class="step-desc mt-4">
           Or edit <code class="inline-code">~/.claude.json</code> directly:
@@ -104,7 +129,7 @@
             <span class="code-filename">~/.claude.json</span>
             <button
               class="copy-btn"
-              data-copy='{"mcpServers":{"card-o-matic":{"type":"stdio","command":"node","args":["/absolute/path/to/card-o-matic-mcp/dist/index.js"],"env":{"LINEAR_ACCESS_TOKEN":"lin_api_XXXX"}}}}'
+              data-copy='{"mcpServers":{"card-o-matic":{"type":"stdio","command":"npx","args":["@thinkneverland/card-o-matic-mcp"],"env":{"LINEAR_ACCESS_TOKEN":"lin_api_XXXX"}}}}'
               >Copy</button
             >
           </div>
@@ -113,8 +138,8 @@
   <span class="code-key">"mcpServers"</span><span class="text-code">: &#123;</span>
     <span class="code-key">"card-o-matic"</span><span class="text-code">: &#123;</span>
       <span class="code-key">"type"</span><span class="text-code">: </span><span class="code-string">"stdio"</span><span class="text-code">,</span>
-      <span class="code-key">"command"</span><span class="text-code">: </span><span class="code-string">"node"</span><span class="text-code">,</span>
-      <span class="code-key">"args"</span><span class="text-code">: [</span><span class="code-string">"/absolute/path/to/card-o-matic-mcp/dist/index.js"</span><span class="text-code">],</span>
+      <span class="code-key">"command"</span><span class="text-code">: </span><span class="code-string">"npx"</span><span class="text-code">,</span>
+      <span class="code-key">"args"</span><span class="text-code">: [</span><span class="code-string">"@thinkneverland/card-o-matic-mcp"</span><span class="text-code">],</span>
       <span class="code-key">"env"</span><span class="text-code">: &#123;</span>
         <span class="code-key">"LINEAR_ACCESS_TOKEN"</span><span class="text-code">: </span><span class="code-string">"lin_api_XXXX"</span>
       <span class="text-code">&#125;</span>
@@ -130,6 +155,30 @@
       <div class="step-card mb-6">
         <div class="step-header">
           <span class="step-num">1</span>
+          <h3 class="step-title">Install from npm</h3>
+        </div>
+        <div class="code-block">
+          <div class="code-topbar">
+            <span class="code-dot red"></span><span class="code-dot yellow"
+            ></span><span class="code-dot green"></span>
+            <span class="code-filename">terminal</span>
+            <button
+              class="copy-btn"
+              data-copy="npm install -g @thinkneverland/card-o-matic-mcp"
+              >Copy</button
+            >
+          </div>
+          <pre
+            class="code-pre"><span class="code-keyword">npm</span><span class="text-code"> install -g @thinkneverland/card-o-matic-mcp</span></pre>
+        </div>
+        <p class="step-desc mt-3">
+          Or skip the install — use <code class="inline-code">npx</code> directly
+          in your MCP config and it runs without a global install.
+        </p>
+      </div>
+      <div class="step-card mb-6">
+        <div class="step-header">
+          <span class="step-num">2</span>
           <h3 class="step-title">Add to Claude with Jira (CLI)</h3>
         </div>
         <div class="code-block">
@@ -145,7 +194,7 @@
   --env JIRA_EMAIL=you@yourorg.com \
   --env JIRA_API_TOKEN=XXXX \
   --env JIRA_PROJECT_KEY=TN \
-  card-o-matic -- node /absolute/path/to/card-o-matic-mcp/dist/index.js"
+  card-o-matic -- npx @thinkneverland/card-o-matic-mcp"
               >Copy</button
             >
           </div>
@@ -156,13 +205,13 @@
   --env </span><span class="code-key">JIRA_EMAIL</span><span class="text-code">=</span><span class="code-string">you@yourorg.com</span><span class="text-code"> \
   --env </span><span class="code-key">JIRA_API_TOKEN</span><span class="text-code">=</span><span class="code-string">XXXX</span><span class="text-code"> \
   --env </span><span class="code-key">JIRA_PROJECT_KEY</span><span class="text-code">=</span><span class="code-string">TN</span><span class="text-code"> \
-  card-o-matic -- node /absolute/path/to/</span><span class="code-string">card-o-matic-mcp</span><span class="text-code">/dist/index.js</span></pre>
+  card-o-matic -- </span><span class="code-keyword">npx</span><span class="text-code"> @thinkneverland/card-o-matic-mcp</span></pre>
         </div>
       </div>
 
       <div class="step-card mb-6">
         <div class="step-header">
-          <span class="step-num">2</span>
+          <span class="step-num">3</span>
           <h3 class="step-title">
             Or edit <code class="inline-code-white">~/.claude.json</code>
           </h3>
@@ -174,7 +223,7 @@
             <span class="code-filename">~/.claude.json</span>
             <button
               class="copy-btn"
-              data-copy='{"mcpServers":{"card-o-matic":{"type":"stdio","command":"node","args":["/absolute/path/to/card-o-matic-mcp/dist/index.js"],"env":{"CARD_O_MATIC_PROVIDER":"jira","JIRA_BASE_URL":"https://yourorg.atlassian.net","JIRA_EMAIL":"you@yourorg.com","JIRA_API_TOKEN":"XXXX","JIRA_PROJECT_KEY":"TN"}}}}'
+              data-copy='{"mcpServers":{"card-o-matic":{"type":"stdio","command":"npx","args":["@thinkneverland/card-o-matic-mcp"],"env":{"CARD_O_MATIC_PROVIDER":"jira","JIRA_BASE_URL":"https://yourorg.atlassian.net","JIRA_EMAIL":"you@yourorg.com","JIRA_API_TOKEN":"XXXX","JIRA_PROJECT_KEY":"TN"}}}}'
               >Copy</button
             >
           </div>
@@ -183,8 +232,8 @@
   <span class="code-key">"mcpServers"</span><span class="text-code">: &#123;</span>
     <span class="code-key">"card-o-matic"</span><span class="text-code">: &#123;</span>
       <span class="code-key">"type"</span><span class="text-code">: </span><span class="code-string">"stdio"</span><span class="text-code">,</span>
-      <span class="code-key">"command"</span><span class="text-code">: </span><span class="code-string">"node"</span><span class="text-code">,</span>
-      <span class="code-key">"args"</span><span class="text-code">: [</span><span class="code-string">"/absolute/path/to/card-o-matic-mcp/dist/index.js"</span><span class="text-code">],</span>
+      <span class="code-key">"command"</span><span class="text-code">: </span><span class="code-string">"npx"</span><span class="text-code">,</span>
+      <span class="code-key">"args"</span><span class="text-code">: [</span><span class="code-string">"@thinkneverland/card-o-matic-mcp"</span><span class="text-code">],</span>
       <span class="code-key">"env"</span><span class="text-code">: &#123;</span>
         <span class="code-key">"CARD_O_MATIC_PROVIDER"</span><span class="text-code">: </span><span class="code-string">"jira"</span><span class="text-code">,</span>
         <span class="code-key">"JIRA_BASE_URL"</span><span class="text-code">: </span><span class="code-string">"https://yourorg.atlassian.net"</span><span class="text-code">,</span>
